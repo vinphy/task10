@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    @media screen and (max-width: 640px) {
+        .order{
+            order: 0 !important;
+        }
+        .direction{
+            align-items:flex-start !important;
+        }
+    }
+    body{
+        padding: 20px;
+        margin: 0;
+    }
+    .container{
+        /*flex布局*/
+        display: flex;
+        /*水平对齐方式*/
+        justify-content: space-between;
+        /*垂直对齐方式*/
+        align-content: flex-start;
+        flex-flow: row wrap;
+    }
+    .direction{
+        align-items: center;
+    }
+    .box{
+        align-content: center;
+        width: 108px;
+        border: 1px #f00 solid;
+        padding: 20px;
+        order: 1;
+        margin-bottom: 20px;
+    }
+    .box1{
+        height: 78px;
+    }
+    .box2{
+        height: 38px;
+    }
+    .box3{
+        height: 0;
+    }
+    .box4{
+        border-color: #0f0;
+        height: 200px;
+
+    }
+
+</style>
+<body>
+<div class="container direction">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4 order"></div>
+</div>
+</body>
+</html>
